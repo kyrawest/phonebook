@@ -60,7 +60,7 @@ If `contacts` is already sorted by phoneNumber,total time complexity is O(n). If
 
 ---
 
-## 🔄 Sorting
+## Sorting
 
 The `PhoneBook` class uses a custom **merge sort** implementation to sort contacts by various fields such as `phoneNumber`, `firstName`, `lastName`, `fullName`, and `email`.
 
@@ -124,3 +124,16 @@ To run the tests:
    - Email
 3. **Updating** a contact's first name
 4. **Deleting** a contact
+
+---
+
+## Difficulties & Wins
+
+### Wins:
+- Implementing merge sort and binary search
+- Learning some handy .js functions like `localeComapare()`
+
+### Difficulties:
+
+- Initial determination of data structure: I considered using a Trie or a hash table and spent a lot of time trying out these methods.
+- Ultimately given how simple a phonebook really is, a simple array-like structure with well thought out algorithms suffices instead.
