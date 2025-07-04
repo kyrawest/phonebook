@@ -40,7 +40,30 @@ While a search function is outside of the scope of this project, we need it for 
 
 For this reason, the search function returns both a contact and the index of where that contact is in the sorted contacts list.
 
-Instead of splicing the array in half at each iteration, `search()` reduces a startIndex and stopIndex for the original contacts array. This means that the midpoint of each iteration will always be the true index of the matching contact, which can then be returned.
+Instead of splicing the array in half at each iteration, `search()` reduces a `startIndex` and `stopIndex` for the original `contacts` array. This means that the midpoint of each iteration will always be the true index of the matching contact, which can then be returned.
+
+### How the `search(phoneNumber)` function works step-by-step:
+
+1. **Initialize two pointers:**  
+   - `startIndex` at the beginning of the contacts array (0).  
+   - `stopIndex` at the end of the contacts array (`contacts.length`).
+
+2. **Loop while** `startIndex < stopIndex:  
+   Continue searching as long as there is a valid range.
+
+3. **Calculate the midpoint:**  
+   ```js
+   midpoint = Math.floor((stopIndex + startIndex) / 2);
+   ```
+   This midpoint is the true index in the original contacts array.
+
+4. **Compare the phoneNumber at midpoint with the target phoneNumber:**
+   - If they are equal, return the contact and the midpoint.
+   - If the contact’s phone number is less than the target, set `startIndex = midpoint + 1` (search right half).
+   - Otherwise, set stopIndex = midpoint (search left half).
+
+5. **If no match is found, return an indication of no result (null).**
+
 
 #### `update(phoneNumber, fieldName, newValue)`
 
