@@ -26,7 +26,7 @@ class PhoneBook {
         this.contacts.push(newContact);
         this.sortedBy = false; //The phonebook does not sort by default when adding, so indicate this here.
     }
-    search(phoneNumber, startIndex = 0, stopIndex = this.contacts.length) {
+    search(phoneNumber, startIndex = 0, stopIndex = this.contacts.length - 1) {
         // Search for contact by phone number, since phone number short by unique and is stored as a number.
         // Uses binary search.
         // This function is used downstream in update and delete methods, so we also want to return the index of the contact found.

@@ -42,6 +42,21 @@ For this reason, the search function returns both a contact and the index of whe
 
 Instead of splicing the array in half at each iteration, `search()` reduces a startIndex and stopIndex for the original contacts array. This means that the midpoint of each iteration will always be the true index of the matching contact, which can then be returned.
 
+### How the `search(phoneNumber)` function works step-by-step:
+
+1. **Initialize two pointers:**
+
+   - `startIndex` at the beginning of the contacts array (0).
+   - `stopIndex` at the end of the contacts array (`contacts.length - 1`).
+
+2. **Loop while** `startIndex <= stopIndex`:  
+   Continue searching as long as there is a valid range.
+
+3. **Calculate the midpoint index:**
+   ```js
+   midIndex = Math.floor((startIndex + stopIndex) / 2);
+   ```
+
 #### `update(phoneNumber, fieldName, newValue)`
 
 This function performs a binary search (`search()`, O(log n)), then uses the returned index to directly update a contact O(1).

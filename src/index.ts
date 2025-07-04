@@ -11,7 +11,7 @@ class Contact {
     // Store names and emails in lowercase only
     this.firstName = firstName.trim().toLowerCase();
     this.lastName = lastName.trim().toLowerCase();
-    this.fullName = `${firstName} ${lastName}`;
+    this.fullName = `${this.firstName} ${this.lastName}`;
     this.phoneNumber = phoneNumber;
     this.email = email.trim().toLowerCase();
   }
