@@ -77,7 +77,7 @@ Instead of splicing the array in half at each iteration, `search()` reduces a `s
 
 3. **Calculate the midpoint index:**
    ```js
-   midIndex = Math.floor((startIndex + stopIndex) / 2);
+   midpoint = Math.floor((startIndex + stopIndex) / 2);
    ```
 
 #### `update(phoneNumber, fieldName, newValue)`
@@ -102,7 +102,7 @@ If `contacts` is already sorted by phoneNumber,total time complexity is O(n). If
 
 The `PhoneBook` class uses a custom **merge sort** implementation to sort contacts by various fields such as `phoneNumber`, `firstName`, `lastName`, `fullName`, and `email`.
 
-> 📝 While JavaScript’s native sort method uses **TimSort**, which is typically faster in practice, this project uses **merge sort** to demonstrate manual sorting logic. Both algorithms have an average time complexity of **`O(n log n)`**, but TimSort’s internal mechanics are considered out of scope for this assignment.
+> While JavaScript’s native sort method uses **TimSort**, which is typically faster in practice, this project uses **merge sort** to demonstrate manual sorting logic. Both algorithms have an average time complexity of **`O(n log n)`**, but TimSort’s internal mechanics are considered out of scope for this assignment.
 
 ### 1. `sort(sortBy)`
 
@@ -147,8 +147,8 @@ The `PhoneBook` class uses a custom **merge sort** implementation to sort contac
 To run the tests:
 
 ```bash
--npm install
--node ./dist/index.js
+npm install
+node ./dist/index.js
 ```
 
 ### Test cases will console.log the phonebook after each case
